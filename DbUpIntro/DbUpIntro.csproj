@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CatalogScripts\01 - Create Tenant Table.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CatalogScripts\01 - Create Tenant Table.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup" Version="4.4.0" />
+    <PackageReference Include="ServiceStack.OrmLite" Version="5.9.2" />
+    <PackageReference Include="ServiceStack.OrmLite.SqlServer" Version="5.9.2" />
+  </ItemGroup>
+
+</Project>
